@@ -1,19 +1,19 @@
 {
-    "thoughts" : [
-        {
-            "id": 1,
-            "title": "Just a thought..",
-            "text": "Coding is funner when you know what your doing"
-        },
-        {
-            "id": 2,
-            "title": "Just a thought..",
-            "text": "I want to hurry up and get a job... please... hire me for Christmas!"
-        },
-        {
-            "id":3,
-            "title": "Just a thought..",
-            "text": "sometimes you just want to cry :("
-        }
-    ]
+  "thoughts": [
+    {
+      "id": 1,
+      "title": "Just a thought..",
+      "text": "Coding is funner when you know what your doing"
+    },
+    {
+      "id": 2,
+      "title": "Team Wishes..",
+      "text": "I want to hurry up and switch careers. coding for a living is lit 🔥"
+    },
+    {
+      "id": 3,
+      "title": "To Avoid Bugs..",
+      "text": "Pay attention to expected Types!"
+    }
+  ]
 }

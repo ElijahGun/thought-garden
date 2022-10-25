@@ -6,7 +6,7 @@ import {useFetch} from '../../hooks/useFetch';
 const ThoughtsPage = () => {
 
   const url = 'http://localhost:3000/thoughts';
- const thoughts = useFetch(url)
+ const { data: thoughts } = useFetch(url)
  console.log(thoughts)
 
   return (
