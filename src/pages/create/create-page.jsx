@@ -1,46 +1,54 @@
-import "./create-page.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useFetch } from "../../hooks/useFetch";
+import { useNavigate } from "react-router-dom";
+
+import "./create-page.scss";
 
 const CreatePage = () => {
   const [title, setTitle] = useState("");
   const [text, setText] = useState("");
+  const [sent, setSent] = useState(false)
 
   const { postData } = useFetch("http://localhost:3000/thoughts", "POST");
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit =  (e) => {
     e.preventDefault();
     postData({ title, text });
+    setSent(true)
+    setTitle("");
+    setText("");
   };
+
+  useEffect(()=> {
+    if (sent) navigate('/')
+
+  },[sent, navigate])
 
   return (
     <div className="thought-box">
       <form className="thought-form" onSubmit={handleSubmit}>
-        <h2 className="thought-form__title">New Thought</h2>
+        <h2 className="thought-form__title">Plant A New Thought In Your Garden...</h2>
         <input
-          required
-          className="thought-form__input"
-          placeholder="Thought Title"
           name="title"
+          required
+          placeholder="Thought Title Here.."
           id="title"
+          className="thought-form__input"
           onChange={(e) => setTitle(e.target.value)}
           value={title}
         />
-        <label htmlFor="title">Thought Title</label>
+        <label htmlFor="title">Thought Title:</label>
         <textarea
-          required
-          className="thought-form__textarea"
-          type="text-area"
           name="text"
+          required
+          placeholder="Thought Title Here.."
           id="text"
-          placeholder="Your Thought Here"
+          className="thought-form__text"
           onChange={(e) => setText(e.target.value)}
           value={text}
         />
-        <label htmlFor="text">Thought Text</label>
-        <button type="submit" className="btn thought-form__btn">
-          Submit Thought
-        </button>
+        <button className="thought-form__btn">Submit Your Thought</button>
       </form>
     </div>
   );
