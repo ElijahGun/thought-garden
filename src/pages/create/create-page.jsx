@@ -7,23 +7,20 @@ import "./create-page.scss";
 const CreatePage = () => {
   const [title, setTitle] = useState("");
   const [text, setText] = useState("");
-  const [sent, setSent] = useState(false)
 
-  const { postData } = useFetch("http://localhost:3000/thoughts", "POST");
+  const { postData, data } = useFetch("http://localhost:3000/thoughts", "POST");
   const navigate = useNavigate();
 
   const handleSubmit =  (e) => {
     e.preventDefault();
     postData({ title, text });
-    setSent(true)
-    setTitle("");
-    setText("");
   };
 
+  //Re-direct once data returns from fetch
   useEffect(()=> {
-    if (sent) navigate('/')
+    if (data) navigate('/')
 
-  },[sent, navigate])
+  },[data, navigate])
 
   return (
     <div className="thought-box">
