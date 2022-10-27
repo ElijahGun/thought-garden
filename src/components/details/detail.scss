@@ -1,0 +1,36 @@
+
+.detail-box {
+    background-color: rgb(white,.6);
+    border-radius: 3px;
+    box-shadow: 0 .5rem .5rem rgb(black,.3);
+    width: 75vw;
+    margin: 0 auto;
+    margin-top: 7rem;
+    background-color: var(--color-green); //competing rules
+    padding: 2rem;
+
+    &__title {
+    color: rgb(white, .8);
+    font-size: 3.75rem;
+        margin-bottom: 3rem;
+    }
+
+    &__text {
+        font-size: 2rem;
+        margin-bottom: 4rem;
+    }
+}
+
+.lnk-btn {
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+    border: 1.5px solid white;
+    border-radius: 3px;
+    padding: .5rem 1rem;
+
+    &:hover {
+        background-color: white;
+        color: var(--color-green);
+    }
+}

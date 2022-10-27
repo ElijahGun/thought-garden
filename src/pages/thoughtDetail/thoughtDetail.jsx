@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom"
 import { useFetch } from "../../hooks/useFetch"
-import Card from "../../components/card/card"
+import Detail from "../../components/details/detail"
 
 export const ThoughtDetail = () => {
     
@@ -13,7 +13,7 @@ export const ThoughtDetail = () => {
 
     return (
         <div>
-            {thought && <Card thought={thought} />}
+            {thought && <Detail key={thought.id} thought={thought}/>}
         </div>
     )
 }

@@ -1,6 +1,8 @@
 import { useState } from "react"
 import { Navigate, useNavigate } from "react-router-dom"
 
+import './searchbar.scss';
+
 
 export const SearchBar = () => {
 
@@ -15,9 +17,9 @@ export const SearchBar = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <label>Search: </label>
-            <input placeholder="Search Thoughts.." onChange={(e) => setSearchText(e.target.value)} value={searchText} />
+        <form onSubmit={handleSubmit} className='searchForm'>
+            <label htmlFor="search" className="searchForm--label">Search: </label>
+            <input className="searchForm--input" name="search" placeholder="Search Thoughts.." onChange={(e) => setSearchText(e.target.value)} value={searchText} />
         </form>
     )
 }

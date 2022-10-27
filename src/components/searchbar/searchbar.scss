@@ -1,0 +1,19 @@
+
+.searchForm {
+
+
+    &--label {
+        font-size: 2rem;
+        color: white;
+        padding-right: 1rem;
+    }
+
+    &--input {
+        display: inline-block;
+        height: 4rem;
+        border: none;
+        border-radius: 3px;
+        box-shadow: 0 .25rem .25rem rgb(black, .2);
+
+    }
+}

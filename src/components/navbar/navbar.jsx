@@ -7,7 +7,7 @@ const NavBar = () => {
     <div className="nav-container">
       <nav className='nav-bar'>
         <NavLink className='nav-bar__link nav-bar__link--home' to='/'>🪴Thought Garden🌿</NavLink>
-        <div className="nav-bar-box--right">
+        <div className="nav-bar--right">
           <SearchBar />
         <NavLink className='nav-bar__link nav-bar__link--create' to='create'>New Thought</NavLink>
         </div>
