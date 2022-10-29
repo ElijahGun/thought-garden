@@ -5,10 +5,10 @@ import { useTheme } from '../../hooks/useTheme';
 
 const NavBar = () => {
 const { color } = useTheme();
-console.log(color)
+
 
   return (
-    <div className="nav-container">
+    <div className="nav-container" style={{background: color}} >
       <nav className='nav-bar'>
         <NavLink className='nav-bar__link nav-bar__link--home' to='/'>🪴Thought Garden🌿</NavLink>
         <div className="nav-bar--right">

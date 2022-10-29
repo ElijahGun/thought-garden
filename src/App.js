@@ -5,11 +5,13 @@ import SearchPage from "./pages/search/search-page";
 import CreatePage from "./pages/create/create-page";
 import NavBar from "./components/navbar/navbar";
 import { ThoughtDetail } from "./pages/thoughtDetail/thoughtDetail";
+import { ThemeButtons } from "./components/ThemeButtons/themeButtons";
 
 function App() {
   return (
     <div className="App">
       <NavBar />
+      <ThemeButtons/>
       <Routes>
         <Route index path="/" element={<ThoughtsPage />} />
         <Route path="/search" element={<SearchPage />} />
