@@ -1,8 +1,12 @@
 import { NavLink } from 'react-router-dom';
 import { SearchBar } from '../searchbar/searchbar';
 import './navbar.scss';
+import { useTheme } from '../../hooks/useTheme';
 
 const NavBar = () => {
+const { color } = useTheme();
+console.log(color)
+
   return (
     <div className="nav-container">
       <nav className='nav-bar'>

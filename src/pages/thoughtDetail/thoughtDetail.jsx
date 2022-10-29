@@ -9,7 +9,6 @@ export const ThoughtDetail = () => {
     const url = 'http://localhost:3000/thoughts/' + id
 
     const { data: thought } = useFetch(url)
-    console.log(thought)
 
     return (
         <div>
