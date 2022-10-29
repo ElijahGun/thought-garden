@@ -1,6 +1,36 @@
 
+.theme-buttons {
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    max-width: 98rem;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+
+}
 .theme-btn {
     height: 2.5rem;
     width: 2.5rem;
     border-radius: 50%;
+    margin-right: .75rem;
+
+    &-0 {
+        margin-left: auto;
+    }
+}
+
+.mode-icon {
+    cursor: pointer;
+
+    &.light {
+        filter: invert(20%);
+    }
+
+    &.dark {
+        filter: invert(100%);
+    }
+
+    &-box {
+
+    }
 }

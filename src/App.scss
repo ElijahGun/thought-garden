@@ -1,7 +1,14 @@
 
 .App {
     text-align: center;
-    background-color: rgb(black, .1);
     min-height: 100vh;
+    
+    &.light {
+        background-color: rgb(black, .1);
+    }
+
+    &.dark {
+        background-color: #333;
+    }
 }
 

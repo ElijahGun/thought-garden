@@ -6,10 +6,14 @@ import CreatePage from "./pages/create/create-page";
 import NavBar from "./components/navbar/navbar";
 import { ThoughtDetail } from "./pages/thoughtDetail/thoughtDetail";
 import { ThemeButtons } from "./components/ThemeButtons/themeButtons";
+import { useTheme } from "./hooks/useTheme";
 
 function App() {
+  
+  const { mode } = useTheme()
+
   return (
-    <div className="App">
+    <div className={`App ${mode}`}>
       <NavBar />
       <ThemeButtons/>
       <Routes>
